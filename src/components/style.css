@@ -3,6 +3,7 @@
     margin: 1px;
     height: 340px;
     width: fit-content;
+    background-color: lightblue;
 }
 
 .divbtn{
@@ -11,4 +12,5 @@
     border: 1px solid black;
     float: left;
     margin: 2px;
+    background-color: white;
 }
