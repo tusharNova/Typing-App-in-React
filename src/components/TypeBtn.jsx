@@ -13,7 +13,7 @@ export default class TypeBtn extends Component {
         return (
 
             <div className='divbtn' style={{width:this.props.item.width,height:this.props.item.height}}>
-                {this.props.item.img != '' ? <img src={require('../img/hindiFontImage/' + this.props.item.img)} /> : this.props.item.word}
+                {this.props.item.img != '' ? <img src={require('../img/hindiFontImage/' + this.props.item.img)} /> : <p className='btnText'>{this.props.item.word}</p>}
 
 
             </div>
