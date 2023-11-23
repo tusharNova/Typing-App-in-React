@@ -19,3 +19,14 @@
     margin: 2px;
     background-color: white;
 }
+/* for wordlayout */
+.wordlayout, .typinglayout{
+    height: 120px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 2px;
+    overflow-y: scroll;
+}
+.wordlayout p{
+    padding: 5px;
+}

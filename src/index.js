@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import TypeBtn from './components/TypeBtn';
+
 import Keylayout from './components/Keylayout';
+import Wordlayout from './components/Wordlayout';
+import TypingLayout from './components/TypingLayout';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
-    
-    <Keylayout/>
+    <Wordlayout/>
+    <TypingLayout/>
+    <Keylayout/>  
     </>
   </React.StrictMode>
 );
