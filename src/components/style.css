@@ -30,3 +30,8 @@
 .wordlayout p{
     padding: 5px;
 }
+.typinglayout div {
+    /* height: inherit; */
+    border: none;
+    padding: 5px
+}
