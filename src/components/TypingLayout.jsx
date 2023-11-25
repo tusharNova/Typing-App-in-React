@@ -11,7 +11,9 @@ export default function TypingLayout() {
     const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit illo veritatis ex cupiditate temporibus voluptates repudiandae aliquid quod. Iusto modi eius aspernatur nulla cum amet sed fuga non assumenda."
     const textlen = text.length
     const [count, setcount] = useState(0)
-    var befourstr = "", currstr = "", afterstr = ""
+    var befourstr = "";
+    var currstr = "";
+    var afterstr = "";
     return (
         <>
             <div className="wordlayout">
@@ -34,7 +36,7 @@ export default function TypingLayout() {
             <div className="typinglayout" contentEditable='true' ref={focusRef} onInput={() => setcount(count + 1)} style={{ padding: "5px" }}>
 
             </div>
-            {/* {count} */}
+            
         </>
 
     )
