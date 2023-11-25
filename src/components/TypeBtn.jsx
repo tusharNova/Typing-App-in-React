@@ -8,8 +8,8 @@ export default class TypeBtn extends Component {
 
     }
     render() {
-        const style = this.props.item.style
-        console.log(style);
+        // const style = this.props.item.style
+        // console.log(style);
         return (
 
             <div className='divbtn' style={{width:this.props.item.width,height:this.props.item.height}}>

@@ -1,26 +1,41 @@
-import React, { Component, useState } from 'react'
+// import userEvent from '@testing-library/user-event'
+import React, { useState, useRef, } from 'react'
+import { useEffect } from 'react';
+export default function TypingLayout() {
 
-export default class TypingLayout extends Component {
-        constructor(props){
-            super(props)
-        }
+    const focusRef = useRef();
+    useEffect(() => {
+        focusRef.current.focus()
+    })
 
-        
-
-    render() {
-        const text = "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia maiores nihil quasi minima sit alias natus assumenda libero, neque rem sapiente, quaerat necessitatibus! Aliquid optio molestias, obcaecati commodi dolore non?"
-        const len = text.length
-        return (
-            <>
+    const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. At fugit illo veritatis ex cupiditate temporibus voluptates repudiandae aliquid quod. Iusto modi eius aspernatur nulla cum amet sed fuga non assumenda."
+    const textlen = text.length
+    const [count, setcount] = useState(0)
+    var befourstr = "", currstr = "", afterstr = ""
+    return (
+        <>
             <div className="wordlayout">
-                <p>{text}{len}</p>
+                {
+                    (() => {
+                        if (count === 0) {
+                            befourstr = "";
+                            currstr = text[count];
+                            afterstr = text.substring(count + 1, textlen);
+                        } else {
+                            befourstr = text.substring(0, count)
+                            currstr = text[count];
+                            afterstr = text.substring(count + 1, textlen);
+                        }
+                        return "";
+                    })()
+                }
+                {befourstr}<span style={{ backgroundColor: 'lightblue' }}>{currstr}</span>{afterstr}
             </div>
-             <div className="typinglayout" >
-                <div contentEditable='true'  onInput={e => console.log('Text inside div', e.currentTarget.textContent)}></div>
-            </div>
+            <div className="typinglayout" contentEditable='true' ref={focusRef} onInput={() => setcount(count + 1)} style={{ padding: "5px" }}>
 
-            </>
-           
-        )
-    }
+            </div>
+            {/* {count} */}
+        </>
+
+    )
 }

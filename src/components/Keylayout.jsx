@@ -2,10 +2,6 @@ import React from 'react'
 import TypeBtn from './TypeBtn';
 export default function Keylayout() {
 
-    const tabbtn = <style>
-        width: 120px;
-        hight: 65px;
-    </style>
     return (
         <>
             <div className='layout'>
@@ -77,7 +73,7 @@ export default function Keylayout() {
                     <TypeBtn item={{ 'word': 'Ctrl', 'img': '', 'style': "color:'red'",'width': '85px' , 'hight':'65px' }} />
                     <TypeBtn item={{ 'word': 'Win', 'img': '', 'style': "color:'red'" ,'width': '85px' , 'hight':'65px'}} />
                     <TypeBtn item={{ 'word': 'Alt', 'img': '', 'style': "color:'red'" ,'width': '85px' , 'hight':'65px'}} />
-                    <TypeBtn item={{ 'word': 'Tab', 'img': '', 'style': tabbtn ,'width': '450px' , 'hight':'65px'}} />
+                    <TypeBtn item={{ 'word': 'Tab', 'img': '', 'style':  "color:'red'",'width': '450px' , 'hight':'65px'}} />
                     <TypeBtn item={{ 'word': 'Alt', 'img': '', 'style': "color:'red'",'width': '85px' , 'hight':'65px' }} />
                     <TypeBtn item={{ 'word': 'Win', 'img': '', 'style': "color:'red'" ,'width': '85px' , 'hight':'65px'}} />
                     <TypeBtn item={{ 'word': 'Ctrl', 'img': '', 'style': "color:'red'" ,'width': '85px' , 'hight':'65px'}} />
