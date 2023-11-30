@@ -12,6 +12,9 @@ export default function TypingLayout() {
     const textlen = text.length
     const [count, setcount] = useState(0)
     var befourstr = "";
+    // const [befourstr , setbefourstr] = useState("");
+    // const [currstr , setcurrstr] = useState("");
+    // const [afterstr , setafterstr] = useState("")
     var currstr = "";
     var afterstr = "";
     return (
